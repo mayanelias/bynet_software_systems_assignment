@@ -1,38 +1,92 @@
 .App {
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.App{
+background-color:#d3a8b1;
+border: whitesmoke 10px solid;
+}
+.category {
+  appearance: none;
+  background-color: #906d77;
+  border-radius: 40em;
+  border-style: none;
+  box-sizing: border-box;
+  color: whitesmoke;
+  cursor: pointer;
+  display: inline-block;
+  font-family: 'Kdam Thmor', cursive;  font-size: 1.2rem;
+  font-weight: 700;
+  letter-spacing: -.24px;
+  outline: none;
+  padding: 1rem 4rem;
+  quotes: auto;
+  text-align: center;
+  text-decoration: none;
+  transition: all .15s;
+  user-select: none;
+  touch-action: manipulation;
+  margin-left:1rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.category:hover {
+  background-color:whitesmoke;
+  box-shadow: black 0 -6px 8px inset;
+  transform: scale(1.125);
+  color: black;
+}
+
+.category:active {
+  transform: scale(1.025);
+}
+input.enterCategory[type="text"] {
+  width: 30%;
+  color: black;
+  background-color: white;
+  padding: 10px 14px;
+  margin-top: 0.5rem;
+  margin-left: -12rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  position: absolute;
+  font-family: 'Kdam Thmor', cursive;
+  font-size: 20px;
+}
+.title{
+color: whitesmoke;
+font-size: 4rem;
+}
+@media screen and (max-width: 1024px) {
+.title{
+font-size: 3rem;
+}
+input.enterCategory[type="text"]{
+  margin-top: -1rem;
+  margin-left: -8rem;
+
+} 
+}
+@media screen and (max-width: 768px) {
+  .title{
+    font-size: 2rem;
+    }
+    input.enterCategory[type="text"]{
+      margin-top: -1rem;
+      margin-left: -8rem;
+    
+    } 
+}
+
+@media screen and (max-width: 425px) {
+  .category{
+    padding: 1rem 1rem;
+
+  }
+  input.enterCategory[type="text"]{
+    width: 58%;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
